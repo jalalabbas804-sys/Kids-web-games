@@ -1,0 +1,52 @@
+.merge-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 12px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.merge-cell {
+  aspect-ratio: 1;
+  background: rgba(255,255,255,0.06);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 800;
+  transition: all 0.2s;
+}
+
+.merge-cell.filled {
+  background: linear-gradient(145deg, #6C63FF, #4a42d4);
+  box-shadow: 0 4px 0 #3a32a8;
+  color: #fff;
+}
+
+.merge-cell[data-val="2"] { background: linear-gradient(145deg, #FFE66D, #e0c800); color: #333; }
+.merge-cell[data-val="4"] { background: linear-gradient(145deg, #FFC93C, #e0a800); color: #333; }
+.merge-cell[data-val="8"] { background: linear-gradient(145deg, #FF9F1C, #d97e00); }
+.merge-cell[data-val="16"] { background: linear-gradient(145deg, #FF6B6B, #d94a4a); }
+.merge-cell[data-val="32"] { background: linear-gradient(145deg, #F38181, #d95a5a); }
+.merge-cell[data-val="64"] { background: linear-gradient(145deg, #AA96DA, #8a76ba); }
+.merge-cell[data-val="128"] { background: linear-gradient(145deg, #4ECDC4, #2ea8a0); }
+.merge-cell[data-val="256"] { background: linear-gradient(145deg, #2EC4B6, #1ea496); }
+.merge-cell[data-val="512"] { background: linear-gradient(145deg, #4CAF50, #3a8a3e); }
+.merge-cell[data-val="1024"] { background: linear-gradient(145deg, #FF6584, #d94a68); }
+.merge-cell[data-val="2048"] { background: linear-gradient(145deg, #6C63FF, #4a42d4); }
+
+.merge-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 8px;
+  margin-top: 20px;
+}
+.merge-controls button {
+  height: 60px;
+  font-size: 24px;
+}
+.merge-controls .empty { visibility: hidden; }

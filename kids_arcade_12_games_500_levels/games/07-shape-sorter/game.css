@@ -1,0 +1,57 @@
+.shape-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.shape-slots {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.shape-slot {
+  width: 80px;
+  height: 80px;
+  border: 3px dashed rgba(255,255,255,0.3);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  transition: all 0.2s;
+}
+
+.shape-slot.filled {
+  border-style: solid;
+  border-color: #4CAF50;
+  background: rgba(76,175,80,0.15);
+}
+
+.shape-pieces {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.shape-piece {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(145deg, #FFC93C, #e0a800);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #b58600;
+  transition: transform 0.15s;
+}
+
+.shape-piece:active { transform: scale(0.9); }
+.shape-piece.selected { box-shadow: 0 0 0 4px #FF6584, 0 5px 0 #b58600; transform: scale(1.1); }
+.shape-piece.used { opacity: 0.2; pointer-events: none; }

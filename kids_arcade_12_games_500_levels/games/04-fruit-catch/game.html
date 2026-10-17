@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Fruit Catch</title>
+  <link rel="stylesheet" href="../../css/main.css" />
+  <link rel="stylesheet" href="../../css/game.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+  <div id="app">
+    <div class="screen" id="game-container">
+      <div class="game-topbar">
+        <div class="left">
+          <button class="icon-btn" id="backBtn">←</button>
+          <div class="game-badge" id="levelBadge">Level 1</div>
+        </div>
+        <div class="right">
+          <div class="game-badge" id="scoreBadge">⭐ 0</div>
+          <div class="game-badge" id="timeBadge">⏱ 30</div>
+        </div>
+      </div>
+      <div class="game-area" id="gameArea" style="padding:0;overflow:hidden;"></div>
+      <div class="game-overlay hidden" id="overlay"></div>
+    </div>
+  </div>
+  <script src="../../js/audioManager.js"></script>
+  <script src="../../js/progress.js"></script>
+  <script src="../../js/ui.js"></script>
+  <script src="../../js/levelManager.js"></script>
+  <script src="levels.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

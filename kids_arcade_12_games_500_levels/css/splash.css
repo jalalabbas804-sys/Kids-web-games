@@ -1,0 +1,61 @@
+#splash-screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #2a2a5e, #0f0f2e);
+  z-index: 9999;
+}
+
+.splash-logo {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FFC93C, #FF6584, #6C63FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: pulse 1.5s ease-in-out infinite;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.splash-subtitle {
+  font-size: 20px;
+  color: var(--text-dim);
+  margin-top: 8px;
+  animation: slideUp 0.8s ease 0.3s both;
+}
+
+.splash-loader {
+  margin-top: 60px;
+  width: 200px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.splash-loader-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--secondary), var(--primary));
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.splash-tip {
+  position: absolute;
+  bottom: 40px;
+  font-size: 14px;
+  color: var(--text-dim);
+  animation: fadeIn 1s ease 1s both;
+}
+
+.splash-emoji {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: bounce 1.2s ease-in-out infinite;
+}

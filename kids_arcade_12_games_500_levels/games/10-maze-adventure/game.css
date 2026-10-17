@@ -1,0 +1,39 @@
+.maze-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.maze-grid {
+  display: grid;
+  gap: 2px;
+  background: rgba(0,0,0,0.3);
+  padding: 10px;
+  border-radius: 16px;
+  max-width: 90vw;
+  max-height: 60vh;
+}
+
+.maze-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+.maze-cell.wall { background: #2a2a4a; }
+.maze-cell.path { background: rgba(255,255,255,0.05); }
+.maze-cell.player { background: linear-gradient(145deg, #FFC93C, #e0a800); }
+.maze-cell.goal { background: linear-gradient(145deg, #4CAF50, #388E3C); }
+.maze-cell.visited { background: rgba(108,99,255,0.3); }
+
+.maze-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 8px;
+}
+.maze-controls button { height: 56px; font-size: 22px; }
+.maze-controls .empty { visibility: hidden; }
